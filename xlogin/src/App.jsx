@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { useState } from "react";
 
@@ -10,7 +9,7 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "user" && password === "password") {
+    if (username.trim() === "user" && password.trim() === "password") {
       setError("");
       setIsSubmitted(true);
     } else {
@@ -18,21 +17,20 @@ export default function App() {
       setIsSubmitted(false);
     }
   };
+
   return (
     <div>
-      {/* <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2> */}
-      <h1> Login Page</h1>
+      <h1>Login Page</h1>
       {isSubmitted ? (
         <div>
-          <p> Welcome, {username}</p>
+          <p>Welcome, {username}</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
           {error && <p>{error}</p>}
 
           <div>
-            <label htmlFor="username">UserName</label>
+            <label htmlFor="username">Username</label>
             <input
               onChange={(e) => setUsername(e.target.value)}
               type="text"
