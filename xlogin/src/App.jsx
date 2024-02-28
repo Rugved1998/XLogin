@@ -32,7 +32,7 @@ export default function App() {
           {error && <p>{error}</p>}
 
           <div>
-            <label htmlFor="username">UserName:</label>
+            <label htmlFor="username">UserName</label>
             <input
               onChange={(e) => setUsername(e.target.value)}
               type="text"
@@ -43,7 +43,7 @@ export default function App() {
             />
           </div>
           <div>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password</label>
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
